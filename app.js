@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const Listing = require("./models/listing");
 const path = require("path");
 const methodOverride = require("method-override");
+const ejsMate = require("ejs-mate");
 
 const MONGO_URL = "mongodb://127.0.0.1:27017/wanderlust";
 
@@ -22,6 +23,18 @@ app.set("view engine", "ejs");
 app.set("views",path.join(__dirname,"views"));
 app.use(express.urlencoded({extended:true}));
 app.use(methodOverride("_method"));
+app.engine("ejs", ejsMate);
+app.use(express.static(path.join(__dirname,"public")));
+
+app.get("/" ,(req,res) => {
+    res.send("Hello, World!");
+})
+
+//index rouute
+app.get("/listings", async (req,res) => {
+    const allListings = await Listing.find({});
+    res.render("listings/index", {allListings});
+})
 
 //new route
 app.get("/listings/new",(req,res) => {
@@ -33,12 +46,6 @@ app.post("/listings",async(req,res) => {
     const newListing = new Listing(req.body.listing);
     await newListing.save();
     res.redirect("/listings");
-})
-
-//index rouute
-app.get("/listings", async (req,res) => {
-    const allListings = await Listing.find({});
-    res.render("listings/index", {allListings});
 })
 
 //show route
@@ -84,9 +91,7 @@ app.delete("/listings/:id", async(req,res) => {
 //     res.send("succesful");
 // })
 
-app.get("/" ,(req,res) => {
-    res.send("Hello, World!");
-})
+
 
 app.listen(8080, () => {
     console.log("Server is running on port 8080");
