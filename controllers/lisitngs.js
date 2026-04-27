@@ -25,7 +25,7 @@ module.exports.createListing = async(req,res,next) => {
         await newListing.save();
         req.flash("success","Successfully created a new listing!");
         res.redirect("/listings");
-}
+};
 
 module.exports.renderEditForm = async (req,res) => {
     const {id} = req.params;
