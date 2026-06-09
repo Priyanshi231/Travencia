@@ -1,0 +1,160 @@
+.hero-section{
+    height: 90vh;
+    background:
+    linear-gradient(
+        rgba(0,0,0,.45),
+        rgba(0,0,0,.45)
+    ),
+    url("https://images.unsplash.com/photo-1505693416388-ac5ce068fe85");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero-content{
+    color:white;
+    max-width:800px;
+}
+
+.hero-content h1{
+    font-size:5rem;
+    font-weight:800;
+}
+
+.hero-content h2{
+    font-size:2.3rem;
+    margin-top:1rem;
+}
+
+.hero-content p{
+    margin-top:1rem;
+    font-size:1.2rem;
+}
+
+.hero-buttons{
+    margin-top:2rem;
+}
+
+.section-title{
+    font-size:3rem;
+    font-weight:800;
+}
+
+.section-subtitle{
+    color:#666;
+}
+
+.category-card{
+    overflow:hidden;
+    border-radius:20px;
+    box-shadow:0 8px 25px rgba(0,0,0,.1);
+    transition:.4s;
+}
+
+.category-card:hover{
+    transform:translateY(-10px);
+}
+
+.category-card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.category-content{
+    padding:1rem;
+    text-align:center;
+}
+
+.stats-section{
+    background:#f8f9fa;
+    padding:5rem 0;
+}
+
+.stat-card h2{
+    color:#ff385c;
+    font-size:3rem;
+    font-weight:800;
+}
+
+.why-section{
+    padding:7rem 0;
+}
+
+.section-tag{
+    color:#ff385c;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+.why-title{
+    font-size:3rem;
+    font-weight:800;
+}
+
+.why-subtitle{
+    color:#666;
+}
+
+.feature-card{
+    background:white;
+    padding:2rem;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    height:100%;
+    transition:.4s;
+}
+
+.feature-card:hover{
+    transform:translateY(-10px);
+}
+
+.icon-circle{
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    background:#ff385c;
+    color:white;
+    margin:auto;
+    margin-bottom:1rem;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:2rem;
+}
+
+.cta-section{
+    padding:8rem 0;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.55),
+        rgba(0,0,0,.55)
+    ),
+    url("https://images.unsplash.com/photo-1505693416388-ac5ce068fe85");
+
+    background-size:cover;
+    background-position:center;
+
+    text-align:center;
+    color:white;
+}
+
+.cta-section h2{
+    font-size:3.5rem;
+    font-weight:800;
+}
+
+.cta-section p{
+    font-size:1.2rem;
+    max-width:700px;
+    margin:1rem auto 2rem;
+}

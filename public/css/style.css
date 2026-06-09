@@ -1,116 +1,242 @@
 body {
-  font-family: "Plus Jakarta Sans", sans-serif !important;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
-.container{
+* {
+    box-sizing: border-box;
+}
+
+.container {
     flex: 1;
 }
 
-.navbar{
-    height: 5rem;
+/* Navbar */
+
+.navbar {
+    min-height: 5rem;
     background-color: white;
 }
 
-.fa-compass{
+.fa-compass {
     color: #fe424d;
     font-size: 2rem;
 }
 
-.nav-link{
+.nav-link {
     color: #222222 !important;
+    font-weight: 500;
 }
 
-/* footer */
-.f-info-links a{
+/* Footer */
+
+.f-info-links a {
     text-decoration: none;
     color: #222222;
 }
 
-.f-info-links a:hover{
+.f-info-links a:hover {
     text-decoration: underline;
 }
 
 .f-info-links,
 .f-info-socials,
-.f-info-brand{
+.f-info-brand {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.f-info-socials i{
+.f-info-socials i {
     font-size: 1.5rem;
     margin-right: 1rem;
 }
 
-.f-info{
+.f-info {
     text-align: center;
-    height: 8rem;
+    min-height: 8rem;
     background-color: #ebebeb;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: space-evenly;
+    padding: 1rem;
 }
 
-/* cards */
+/* Listing Cards */
 
-.listing-card{
+.listing-card {
     border: none !important;
     margin-bottom: 2rem;
+    transition: all 0.3s ease;
 }
 
-.card-img-top{
+.listing-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-top {
     border-radius: 1rem !important;
     width: 100% !important;
+    height: 20rem;
     object-fit: cover !important;
 }
 
-.card-body{
-    padding: 0 !important;
+.card-body {
+    padding: 0.5rem !important;
 }
 
-.card-text p{
+.card-text p {
     font-weight: 400;
 }
 
-.listing-link{
+.listing-link,
+.listing-link:hover {
     text-decoration: none;
+    color: #222222;
 }
 
-/* card effect */
-.card-img-overlay{
-    opacity: 0;
-}
+/* Buttons */
 
-.card-img-overlay:hover{
-    opacity: 0.2;
-    background-color: white;
-}
-
-.add-btn{
+.add-btn,
+.edit-btn {
     background-color: #fe424d !important;
     border: none !important;
 }
 
-.edit-btn{
-    background-color: #fe424d !important;
-    border: none !important;
+.add-btn:hover,
+.edit-btn:hover {
+    background-color: #e63946 !important;
 }
 
-.show-img{
-    height: 30vh;
+/* Show Page */
+
+.show-img {
+    height: 50vh;
+    object-fit: cover;
 }
 
-.btns{
+.btns {
     display: flex;
+    gap: 1rem;
 }
 
-.show-card{
+.show-card {
     padding-left: 0;
     padding-right: 0;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+/* Filters */
+
+#filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 1rem 0 2rem;
+}
+
+.filter {
+    text-align: center;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    min-width: 80px;
+}
+
+.filter i {
+    font-size: 1.3rem;
+}
+
+.filter:hover {
+    opacity: 1;
+    cursor: pointer;
+    transform: translateY(-4px);
+    color: #fe424d;
+}
+
+/* Tablet */
+
+@media (max-width: 992px) {
+
+    .show-img {
+        height: 40vh;
+    }
+
+    .card-img-top {
+        height: 18rem;
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        min-height: auto;
+        padding: 0.5rem 1rem;
+    }
+
+    .card-img-top {
+        height: 15rem;
+    }
+
+    .show-img {
+        height: 30vh;
+    }
+
+    .btns {
+        flex-direction: column;
+    }
+
+    #filters {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding-bottom: 0.5rem;
+        scrollbar-width: none;
+    }
+
+    #filters::-webkit-scrollbar {
+        display: none;
+    }
+
+    .filter {
+        flex-shrink: 0;
+        min-width: 90px;
+    }
+
+    .f-info {
+        padding: 1rem;
+    }
+}
+
+/* Small Phones */
+
+@media (max-width: 576px) {
+
+    .fa-compass {
+        font-size: 1.7rem;
+    }
+
+    .card-img-top {
+        height: 13rem;
+    }
+
+    .show-img {
+        height: 25vh;
+    }
+
+    .filter i {
+        font-size: 1.1rem;
+    }
+
+    .filter p {
+        font-size: 0.85rem;
+    }
 }

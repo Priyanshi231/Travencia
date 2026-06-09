@@ -50,10 +50,6 @@ const sessionOptions = {
     }
 };
 
-app.get("/" ,(req,res) => {
-    res.send("Hello, World!");
-})
-
 app.use(session(sessionOptions));
 app.use(flash());
 
@@ -70,6 +66,10 @@ app.use((req,res,next) => {
     res.locals.currUser = req.user;
     next();
 });
+
+app.get("/" ,(req,res) => {
+    res.render("home");
+})
 
 // app.get("/demoUser", async (req,res) => {
 //     let fakeUser = new User({
