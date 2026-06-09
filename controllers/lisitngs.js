@@ -5,6 +5,21 @@ module.exports.index = async (req,res) => {
     res.render("listings/index.ejs", {allListings});
 };
 
+module.exports.searchListings = async (req, res) => {
+
+    let { q } = req.query;
+
+    const allListings = await Listing.find({
+        $or: [
+            { title: { $regex: q, $options: "i" } },
+            { location: { $regex: q, $options: "i" } },
+            { country: { $regex: q, $options: "i" } }
+        ]
+    });
+
+    res.render("listings/index", { allListings });
+};
+
 module.exports.renderNewForm = (req,res) => {
     res.render("listings/new");
 };
