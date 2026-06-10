@@ -14,7 +14,7 @@ module.exports.signup = async (req, res) => {
         if (err) {
           return next(err);
         }      
-        req.flash("success", "Welcome to Travencia!");
+        req.flash("success", "Welcome to StaySphere!");
         res.redirect("/listings");
       });  
     } catch (e) {

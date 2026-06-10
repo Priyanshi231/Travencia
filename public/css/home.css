@@ -159,6 +159,40 @@
     margin:1rem auto 2rem;
 }
 
+.destination-card{
+    text-align:center;
+}
+
+.destination-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:20px;
+    margin-bottom:10px;
+}
+
+.testimonial-section{
+    background:#f8f9fa;
+    padding:6rem 0;
+}
+
+.testimonial-card{
+    background:white;
+    padding:2rem;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    height:100%;
+}
+
+.hero-highlight{
+    color:#ff385c;
+}
+
+.hero-search{
+    max-width:500px;
+    margin:2rem auto;
+}
+
 /* Tablet */
 
 @media (max-width: 992px){
