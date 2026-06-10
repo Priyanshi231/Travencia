@@ -101,6 +101,11 @@ body {
     color:  #fe424d;
 }
 
+.title{
+    font-size: 2rem;
+    font-weight: 400;
+}
+
 /* Buttons */
 
 .add-btn,
