@@ -93,10 +93,12 @@ body {
     font-weight: 400;
 }
 
-.listing-link,
-.listing-link:hover {
+.listing-link {
     text-decoration: none;
     color: #222222;
+}
+.listing-link:hover{
+    color:  #fe424d;
 }
 
 /* Buttons */
@@ -138,7 +140,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 1.5rem;
-    margin: 1rem 0 2rem;
+    margin: 1rem 0;
 }
 
 .filter {
@@ -164,6 +166,10 @@ body {
     color:white;
     border:none;
 }
+.search-bar{
+    width: 100%;
+    max-width: 450px;
+}
 
 .search-btn:hover{
     background-color:#e63946;
@@ -186,13 +192,11 @@ body {
 
 /* Mobile */
 
-@media(max-width:768px){
-
+@media(max-width: 768px){
     .search-bar{
         width: 100%;
-        margin: 1rem 0;
+        margin-top: 1rem;
     }
-
 }
 
 @media (max-width: 768px) {
