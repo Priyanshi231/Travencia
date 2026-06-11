@@ -1,6 +1,6 @@
-#  Travencia - Full Stack Travel Booking Platform
+#  StaySphere - Full Stack Travel Booking Platform
 
-Wanderlust is a full-stack web application designed to help users explore travel destinations, create listings, and share reviews of places they have visited. It provides a smooth and interactive experience for travelers to discover and manage travel-related content.
+StaySphere is a full-stack web application designed to help users explore travel destinations, create listings, and share reviews of places they have visited. It provides a smooth and interactive experience for travelers to discover and manage travel-related content.
 
 ---
 
@@ -64,7 +64,7 @@ Follow these steps to run the project locally:
 ### 1. Clone the repository
 
 ```bash id="g9k2pl"
-git clone https://github.com/76210/Wanderlust.git
+git clone https://github.com/Priyanshi231/StaySphere.git
 ```
 
 ### 2. Install dependencies
